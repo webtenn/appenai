@@ -542,7 +542,7 @@ a:focus.appen-footer_social-link {
   position: relative;    
   padding-block: 2rem;
   isolation: isolate;
-  background-color: #08090d;
+  background-color: #d7dee0;
   --wrapper-padding-inline: 5%;
   --wrapper-max-width: 80rem;
   --section-padding-block: 1rem;
