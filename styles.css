@@ -457,7 +457,7 @@ ul.link-list a {
   color: #000;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-  text-decoration-color: var(--link-color--link-primary);
+  text-decoration-color: var(--link-color--link-primary-hover);
   text-decoration-line: underline;
   text-underline-offset: .25em;
   -webkit-transition: all 0.3s ease-in-out;
