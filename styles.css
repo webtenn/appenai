@@ -471,6 +471,7 @@ p a:focus,
 ul.link-list a:hover,
 ul.link-list a:focus {
   color: var(--link-color--link-primary);
+  text-decoration-thickness: 2px;
 }
 
 a.appen-footer_link,
