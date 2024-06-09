@@ -490,7 +490,7 @@ a:hover.date-filter-link,
 a:focus.date-filter-link {
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-	text-decoration-color: var(--link-color--link-primary);
+	text-decoration-color: var(--link-color--link-inverse-hover);
   text-decoration-line: underline;
 	text-underline-offset: .25em;
 }
@@ -503,7 +503,7 @@ a.appen-footer_social-link {
 
 a:hover.appen-footer_social-link,
 a:focus.appen-footer_social-link {
-	color: var(--link-color--link-primary);
+	color: var(--link-color--link-inverse-hover);
 }
 
 /* Rich Text */
