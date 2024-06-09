@@ -454,7 +454,7 @@ a,
 p a,
 .text-rich-text a,
 ul.link-list a {
-  color: #fff;
+  color: #000;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
   text-decoration-color: var(--link-color--link-primary);
