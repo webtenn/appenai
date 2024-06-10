@@ -955,7 +955,7 @@ a:focus.appen-footer_social-link {
 /* Blog Tables */
 
 .blog-table { font-size: 1rem; margin-top: 1rem; margin-bottom: .5rem; }
-.blog-table tbody { border-top: 1px solid #303a54; border-bottom: 1px solid #303a54; }
+.blog-table tbody { border-top: 1px solid var(--border-color--border-table); border-bottom: 1px solid var(--border-color--border-table); }
 .blog-table td { padding: .5rem; }
 .blog-table td strong { font-weight: 600; }
 
@@ -963,9 +963,9 @@ a:focus.appen-footer_social-link {
   font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: .5rem;
-  color: #fff;
+  color: #000;
   width: 100%;
-  border: 4px solid #303a54;
+  border: 4px solid var(--border-color--border-table);
   text-align: center;
   border-collapse: collapse;
 }
@@ -975,30 +975,30 @@ a:focus.appen-footer_social-link {
 .data-table-align-top td, .data-table-align-top td { vertical-align: top; }
 
 .data-table td, .data-table th {
-  border: 1px solid #303a54;
+  border: 1px solid var(--border-color--border-table);
   padding: 0.5rem; 
 }
 .data-table th { font-weight: 600; }
 .data-table td strong { font-weight: 600; }
-.data-table tr.divider { border-top: 4px solid #303a54; }
+.data-table tr.divider { border-top: 4px solid var(--border-color--border-table); }
 
 .line-table {
   font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: .5rem;
-  color: #fff;
+  color: #000;
   width: 100%;
-  border-top: 4px solid #303a54;
-  border-bottom: 4px solid #303a54;
+  border-top: 4px solid var(--border-color--border-table);
+  border-bottom: 4px solid var(--border-color--border-table);
   text-align: left;
   border-collapse: collapse;
 }
 .line-table td, .line-table th {
-  border-top: 1px solid #303a54;
+  border-top: 1px solid var(--border-color--border-table);
   padding: 0.5rem;
   vertical-align: top;
 }
 .line-table th { font-weight: 600; }
 .line-table td strong { font-weight: 600; }
-.line-table tr.divider { border-top: 4px solid #303a54; }
+.line-table tr.divider { border-top: 4px solid var(--border-color--border-table); }
 
