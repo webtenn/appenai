@@ -521,10 +521,10 @@ a:focus.appen-footer_social-link {
 }
 
 .text-rich-legal ul a {
-  color: #fff;
+  color: #000;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-  text-decoration-color: var(--link-color--link-primary);
+  text-decoration-color: var(--link-color--link-primary-hover);
   text-decoration-line: underline;
   text-underline-offset: .25em;
   -webkit-transition: all 0.3s ease-in-out;
@@ -781,8 +781,8 @@ a:focus.appen-footer_social-link {
 
 .swiper-button-disabled,
 .swiper-button-disabled {
-  color: #3f4659;
-  border-color: #3f4659;
+  color: #d7dee0;
+  border-color: #d7dee0;
 }
 
 /* Form Modal */
