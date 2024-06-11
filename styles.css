@@ -893,11 +893,11 @@ a:focus.appen-footer_social-link {
 .mktoForm .mktoFieldWrap input:-webkit-autofill:focus,
 .mktoForm .mktoFieldWrap input:-webkit-autofill:active {
   transition: background-color 5000s;
-  -webkit-text-fill-color: #d5d8e2 !important;
+  -webkit-text-fill-color: #000 !important;
 }
 
 .mktoForm .mktoFieldWrap textarea:focus, .mktoForm .mktoFieldWrap input:focus {
-    color: #d5d8e2;
+    color: #000;
 }
 
 .mktoForm .mktoFieldWrap textarea::placeholder {
