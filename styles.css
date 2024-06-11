@@ -788,19 +788,16 @@ a:focus.appen-footer_social-link {
 /* Form Modal */
 
 .form-modal_content-wrapper {
-	background: var(--black);
+	background: #fff;
 	border: none;
 }
 
 @media (min-width: 48rem) { 
 	.form-modal_content-wrapper {	 	
     position: relative;
-    border: 1px solid transparent;
+    border: 1px solid #eceff0;
     border-radius: 1.5rem;
-    background: var(--black);
-    background:
-    radial-gradient(ellipse 80% 200% at 50% 50%, var(--black), var(--black)) padding-box,
-    linear-gradient(135deg, var(--border-gradient--bg-color-end) -13.6%, var(--border-gradient--bg-color-mid) 26.79%, var(--border-gradient--bg-color-start) 107.05%) border-box;
+    background: #fff;
   }
 }
 
