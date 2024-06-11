@@ -901,7 +901,7 @@ a:focus.appen-footer_social-link {
 }
 
 .mktoForm .mktoFieldWrap textarea::placeholder {
-  color: #d5d8e2;
+  color: #000;
 }
 
 .mktoForm textarea.mktoField {
