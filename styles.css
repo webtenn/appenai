@@ -863,7 +863,7 @@ a:focus.appen-footer_social-link {
 	font-family: Poppins,sans-serif;
 	font-size: 0.875rem;
   font-weight: 500;
-	color: #d5d8e2;
+	color: #000;
 	width: 100% !important;
   padding-left: 0.188rem;
   margin-bottom: 0.25rem;
@@ -877,7 +877,7 @@ a:focus.appen-footer_social-link {
 .mktoForm .mktoFieldWrap input,
 .mktoForm .mktoFieldWrap select,
 .mktoForm .mktoFieldWrap textarea {
-	color: #d5d8e2 !important;
+	color: #000 !important;
   font-family: Poppins,sans-serif;
 	font-size: 1rem !important;
   padding: 0.75rem !important;
@@ -886,8 +886,8 @@ a:focus.appen-footer_social-link {
   border-radius: 0.5rem !important;
   box-sizing: border-box;
   box-shadow: none;
-  background: #1f2333;
-  height: 3rem !important; 
+  background: #eceff0;
+  height: 3rem !important;
 }
 
 /* Chrome autofill background color */
@@ -924,8 +924,8 @@ a:focus.appen-footer_social-link {
   font-weight: 500;
   padding: 0.75rem 1.5rem;
 	margin: 1em auto !important;
-  border: 1px solid var(--button--btn-accent);
-	background: var(--button--btn-accent);
+  border: 1px solid var(--button--btn-primary);
+	background: var(--button--btn-primary);
   box-shadow: none;
 	border-radius: 50rem;
   -webkit-transition: background 0.3s ease;
@@ -933,7 +933,7 @@ a:focus.appen-footer_social-link {
 }
 
 #mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button:hover {
-	background: var(--button--btn-accent-hover);
+	background: var(--button--btn-primary-hover);
 }
 
 /* Cookie Pro */
