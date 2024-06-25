@@ -263,11 +263,6 @@ a,
   	margin: 0 auto;
 	}
 
-  .dd_menu-start-list {
-    min-width: 60rem !important;
-  	max-width: 65rem;
-	}
-
   .dd_menu-data-list, .dd_menu-apps-list, .dd_menu-res-list, .dd_menu-start-list {
     background: radial-gradient(ellipse 80% 200% at 50% 50%, rgba(51,61,89,0.75), #08090d);
   }
