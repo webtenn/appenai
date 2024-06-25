@@ -254,7 +254,7 @@ a,
 /* Navbar */
 
 @media only screen and (min-width: 992px) {
-	.dd_menu-data-list, .dd_menu-res-list {
+	.dd_menu-data-list, .dd_menu-res-list, .dd_menu-start-list {
     min-width: 30rem !important;
   	max-width: 63rem;
   	bottom: auto;
@@ -262,7 +262,7 @@ a,
   	right: 0;
   	margin: 0 auto;
 	}
-  .dd_menu-data-list, .dd_menu-apps-list, .dd_menu-res-list  {
+  .dd_menu-data-list, .dd_menu-apps-list, .dd_menu-res-list, .dd_menu-start-list {
     background: radial-gradient(ellipse 80% 200% at 50% 50%, rgba(51,61,89,0.75), #08090d);
   }
   .dd_menu-locale-list  {
