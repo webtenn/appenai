@@ -288,15 +288,29 @@ a,
 .dd-item_article .text-size-small { color: var(--text-color--text-secondary-nav);}
 
 @media only screen and (min-width: 1280px) {
-	.dd_menu-ctas {
-    display: none !important;
-  }
+	.dd_menu-ctas { display: none !important; }
+  .dd_toggle-button-dots { display: none; }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1279px) {
   .nav-ctas {
     display: none !important;
   }
+
+  .dd_toggle-button { 
+    padding: 1.5rem 0rem;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .dd_toggle-button:hover { 
+    color:#33b8fd !important;
+    background-color: transparent;
+  }
+  
+  .dd_toggle-button-text { display: none; }
+  
+  .dd_menu-start-list.w--open { top: 100%; right: 0%; bottom: auto; left: auto; }
 }
 
 @media only screen and (min-width: 992px) {

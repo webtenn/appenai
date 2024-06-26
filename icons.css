@@ -24,6 +24,8 @@
     --ico-cloud-data: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b83405a33b595d05fd7ca9_cloud-data.svg);
     --ico-code-generation: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b83405fc1dcbcde2d7db2f_code-generation.svg);
     --ico-computer-vision: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b834053f244914d14b59fd_computer-vision.svg);
+    --ico-crowd-login: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/667c3610019d373c75f2a1fd_crowd-login.svg);
+    --ico-crowd-join: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/667c3611f039fe55173c382b_crowd-join.svg);
     --ico-crowd: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b834054643b9f6191dcf84_crowd.svg);
     --ico-curate-data: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b7dcfafd4c796f048b4ee0_curate-data.svg);
     --ico-data-annotation: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b83405bb2671c7931a4d3a_data-annotation.svg);
@@ -54,6 +56,7 @@
     --ico-image: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b8341296101a5362588f70_image.svg);
     --ico-industries: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b83412f9e58815493c9420_industries.svg);
     --ico-layers: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b7d03dcf022cda795feb72_layers.svg);
+    --ico-link: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/667c3610ac4c1c2f449ccf0c_link.svg);
     --ico-locked: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b83412cdca80d8070a7745_locked.svg);
     --ico-magic-wand: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b83412b19fc5081558ec90_magic-wand.svg);
     --ico-mobile-audio: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b8341248853d22f374973c_mobile-audio.svg);
@@ -80,6 +83,7 @@
     --ico-text-creation: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b8341ebcbef2061331b080_text-creation.svg);
     --ico-transcription: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b8341e751553ed0974d008_transcription.svg);
     --ico-translation: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b8341e751553ed0974d005_translation.svg);
+    --ico-user: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/667c36113b45349d680caf58_user.svg);
     --ico-video: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b8341e30fa9d5b63c3993d_video.svg);
     --ico-visual-recognition: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b8341e5ebce710fc6343b5_visual-recognition.svg);
     --ico-voice: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/65b8341ecf86c236d2b4f13d_voice.svg);
