@@ -924,7 +924,7 @@ a:focus.appen-footer_social-link {
   border: 1px solid var(--button--btn-primary);
 	background: var(--button--btn-primary);
   box-shadow: none;
-	border-radius: 50rem;
+	border-radius: 0.5rem;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
@@ -932,6 +932,35 @@ a:focus.appen-footer_social-link {
 #mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
 #mktoForm_2072 > div.mktoButtonRow > span.mktoButtonWrap > button:hover {
 	background: var(--button--btn-primary-hover);
+}
+
+/* Consent checkboxes */
+
+#LblEmail_Consent__c.mktoLabel,
+#LblPersonal_Data_Processing_Confirmation__c.mktoLabel {
+	float: right;
+  padding-top: 18px;
+}
+
+@media only screen and (min-width:768px) {
+	#LblEmail_Consent__c.mktoLabel,
+		#LblPersonal_Data_Processing_Confirmation__c.mktoLabel {
+			width: 95% !important;
+	}
+}
+
+@media (min-width: 391px) and (max-width: 767px) {
+	#LblEmail_Consent__c.mktoLabel,
+		#LblPersonal_Data_Processing_Confirmation__c.mktoLabel {
+			width: 90% !important;
+	}
+}
+
+@media only screen and (max-width:390px) {
+	#LblEmail_Consent__c.mktoLabel,
+		#LblPersonal_Data_Processing_Confirmation__c.mktoLabel {
+			width: 85% !important;
+	}
 }
 
 /* Cookie Pro */
