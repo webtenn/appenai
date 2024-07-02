@@ -913,7 +913,8 @@ a:focus.appen-footer_social-link {
 	width: 100% !important;
 }
 
-#mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button {
+#mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button,
+#mktoForm_2072 > div.mktoButtonRow > span.mktoButtonWrap > button {
 	color: #fff;
   font-family: Poppins,sans-serif;
   font-size: 1rem;
@@ -928,7 +929,8 @@ a:focus.appen-footer_social-link {
   transition: background 0.3s ease;
 }
 
-#mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button:hover {
+#mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
+#mktoForm_2072 > div.mktoButtonRow > span.mktoButtonWrap > button:hover {
 	background: var(--button--btn-primary-hover);
 }
 
