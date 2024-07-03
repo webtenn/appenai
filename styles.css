@@ -913,6 +913,10 @@ a:focus.appen-footer_social-link {
 	width: 100% !important;
 }
 
+.mktoTemplateBox span.mktoButtonWrap {
+  text-align: left !important;
+}
+
 #mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button,
 #mktoForm_2072 > div.mktoButtonRow > span.mktoButtonWrap > button,
 #mktoForm_2072 > div.mktoTemplateBox > span.mktoButtonWrap > button {
@@ -934,6 +938,7 @@ a:focus.appen-footer_social-link {
 #mktoForm_2072 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
 #mktoForm_2072 > div.mktoTemplateBox > span.mktoButtonWrap > button:hover {
 	background: var(--button--btn-primary-hover);
+  border: 1px solid var(--button--btn-primary-hover);
 }
 
 /* Consent checkboxes */
