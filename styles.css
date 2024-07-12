@@ -562,6 +562,11 @@ a:focus.appen-footer_social-link {
   height: auto;
 }
 
+.appen-grad {
+  background: linear-gradient(72deg, rgba(124, 208, 255, 0.33) 7.43%, rgba(240, 239, 234, 1) 88.33%);
+  background-repeat: no-repeat;  
+}
+
 .mesh-one {
   background-color: hsla(228,23%,4%,1);
   background-image:
@@ -1038,3 +1043,32 @@ a:focus.appen-footer_social-link {
 .line-table td strong { font-weight: 600; }
 .line-table tr.divider { border-top: 4px solid var(--border-color--border-table); }
 
+/* Landing pages */
+
+[cta-theme="light"] { background-color: #fff; }
+
+.resource-lp_item-link img.resource-lp_img {
+  transition: 0.3s ease;
+}
+
+.resource-lp_item-link:hover img.resource-lp_img {
+  transform: scale(1.1);
+}
+
+#mktoForm_2753 .mktoFormRow:nth-of-type(n+7) {
+  width: 100%;
+}
+
+@media only screen and (min-width:768px) {
+	#mktoForm_2753 .mktoFormRow:nth-child(-n+7) {
+  	width: 48%;
+  	margin-right: 0.05rem;
+	}
+}
+
+@media only screen and (max-width:767px) {
+	#mktoForm_2753 .mktoFormRow:nth-child(-n+7) {
+  	width: 100%;
+  	margin-right: 0;
+	}
+}
