@@ -923,6 +923,7 @@ a:focus.appen-footer_social-link {
 }
 
 #mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button,
+#mktoForm_2752 > div.mktoButtonRow > span.mktoButtonWrap > button,
 #mktoForm_2753 > div.mktoButtonRow > span.mktoButtonWrap > button,
 #mktoForm_2072 > div.mktoButtonRow > span.mktoButtonWrap > button,
 #mktoForm_2072 > div.mktoTemplateBox > span.mktoButtonWrap > button {
@@ -941,6 +942,7 @@ a:focus.appen-footer_social-link {
 }
 
 #mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
+#mktoForm_2752 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
 #mktoForm_2753 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
 #mktoForm_2072 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
 #mktoForm_2072 > div.mktoTemplateBox > span.mktoButtonWrap > button:hover {
