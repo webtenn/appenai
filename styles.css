@@ -1048,12 +1048,14 @@ a:focus.appen-footer_social-link {
 /* Resource cards */
 
 .resource_item-link img.resource_img,
-.resource-lp_item-link img.resource-lp_img {
+.resource-lp_item-link img.resource-lp_img,
+.resource_item-container img.resource_img {
   transition: 0.3s ease;
 }
 
 .resource_item-link:hover img.resource_img,
-.resource-lp_item-link:hover img.resource-lp_img {
+.resource-lp_item-link:hover img.resource-lp_img,
+.resource_item-container:hover img.resource_img {
   transform: scale(1.1);
 }
 
