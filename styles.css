@@ -1045,17 +1045,21 @@ a:focus.appen-footer_social-link {
 .line-table td strong { font-weight: 600; }
 .line-table tr.divider { border-top: 4px solid var(--border-color--border-table); }
 
-/* Landing pages */
+/* Resource cards */
 
-[cta-theme="light"] { background-color: #fff; }
-
+.resource_item-link img.resource_img,
 .resource-lp_item-link img.resource-lp_img {
   transition: 0.3s ease;
 }
 
+.resource_item-link:hover img.resource_img,
 .resource-lp_item-link:hover img.resource-lp_img {
   transform: scale(1.1);
 }
+
+/* Landing pages */
+
+[cta-theme="light"] { background-color: #fff; }
 
 #mktoForm_2753 .mktoFormRow:nth-of-type(n+7) {
   width: 100%;
