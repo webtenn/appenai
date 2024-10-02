@@ -508,6 +508,27 @@ a:focus.appen-footer_social-link {
 	color: var(--link-color--link-inverse-hover);
 }
 
+/* Text Warm */
+
+p.text-color-warm a { color: #f0efea; }
+p.text-color-warm a:hover { color: #33b8fd; }
+
+ul.text-color-warm li a {
+	color: #f0efea;
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+  text-decoration-color: var(--link-color--link-primary-hover);
+  text-decoration-line: underline;
+  text-underline-offset: .25em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
+	color: var(--link-color--link-primary);
+  text-decoration-thickness: 2px;
+}
+
 /* Rich Text */
 
 .text-rich-text p strong, .text-rich-text li strong {
@@ -978,6 +999,11 @@ a:focus.appen-footer_social-link {
 			width: 85% !important;
 	}
 }
+
+
+.mktoForm input[type=checkbox] { opacity: 1; }
+.mktoForm input[type=checkbox] + label:before { display: none; }
+.mktoForm input[type=checkbox]:checked + label:before { display: none; }
 
 /* Cookie Pro */
 
