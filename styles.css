@@ -1029,7 +1029,7 @@ ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
   background-color: inherit;
 }
 
-/* Blog Tables */
+/* Collection Styles */
 
 .blog-table { font-size: 1rem; margin-top: 1rem; margin-bottom: .5rem; }
 .blog-table tbody { border-top: 1px solid var(--border-color--border-table); border-bottom: 1px solid var(--border-color--border-table); }
@@ -1091,6 +1091,40 @@ ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
 .resource-lp_item-link:hover img.resource-lp_img,
 .resource_item-container:hover img.resource_img {
   transform: scale(1.1);
+}
+
+.collection_logos {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2rem 0;
+}
+
+.collection_logos h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+ .collection_logos-flex {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   gap: 0rem 4rem;
+   justify-content: center; 
+   margin: 0 auto;
+   width: 100%;
+}
+
+.collection_logos-item {  
+  text-decoration: none;
+  color: #111;
+  position: relative;
+  background-color: #fff;
+/*   border: 1px solid #d1d3d4; */
+}
+
+.collection_logos-item img {
+  width: auto;
+  height: 6rem;  
 }
 
 /* Landing pages */
