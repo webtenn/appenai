@@ -951,7 +951,9 @@ ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
 #mktoForm_2071 > div.mktoButtonRow > span.mktoButtonWrap > button,
 #mktoForm_2071 > div.mktoTemplateBox > span.mktoButtonWrap > button,
 #mktoForm_2773 > div.mktoButtonRow > span.mktoButtonWrap > button,
-#mktoForm_2773 > div.mktoTemplateBox > span.mktoButtonWrap > button {
+#mktoForm_2773 > div.mktoTemplateBox > span.mktoButtonWrap > button,
+#mktoForm_2778 > div.mktoButtonRow > span.mktoButtonWrap > button,
+#mktoForm_2778 > div.mktoTemplateBox > span.mktoButtonWrap > button {
 	color: #fff;
   font-family: Poppins,sans-serif;
   font-size: 1rem;
@@ -974,7 +976,9 @@ ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
 #mktoForm_2071 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
 #mktoForm_2071 > div.mktoTemplateBox > span.mktoButtonWrap > button:hover,
 #mktoForm_2773 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
-#mktoForm_2773 > div.mktoTemplateBox > span.mktoButtonWrap > button:hover {
+#mktoForm_2773 > div.mktoTemplateBox > span.mktoButtonWrap > button:hover,
+#mktoForm_2778 > div.mktoButtonRow > span.mktoButtonWrap > button:hover,
+#mktoForm_2778 > div.mktoTemplateBox > span.mktoButtonWrap > button:hover {
 	background: var(--button--btn-primary-hover);
   border: 1px solid var(--button--btn-primary-hover);
 }
