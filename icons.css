@@ -107,4 +107,16 @@
     --ico-logistics: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/66fd755d4f6a21f4b3b2def2_logistics.svg);
     --ico-urban-planning: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/66fd755d6c3039720fd623c1_urban-planning.svg);
     --ico-poi-data: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/66fd755df163aa2b95b8bd2b_poi-data.svg);
+    --ico-auto-multi: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f9688fc828dabbab8959b_auto-multi.svg);
+    --ico-collab: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f968876fd3de338f4a7d7_collaborate.svg);
+    --ico-datacenter: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f9688a68e36e649140dfa_data-center.svg);
+    --ico-data: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f9688432b816a078d2080_data.svg);
+    --ico-image-to-text: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f9688df0e9dda526a6049_image-to-text.svg);
+    --ico-search: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f968876e5c081375fac6c_search.svg);
+    --ico-sme: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f9688ccf45bca6e668622_sme.svg);
+    --ico-text-to-audio: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f9688e0c96f6d14c62ce5_text-to-audio.svg);
+    --ico-text-to-image: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f96888796c72e73ee9400_text-to-image.svg);
+    --ico-text-to-video: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f96889151708cb2836e62_text-to-video.svg);
+    --ico-user-pref: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f9688f337f22772ad0c8d_user-preference.svg);
+    --ico-video-to-text: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/673f96887d14178e8d0a8f6d_video-to-text.svg);
 }
