@@ -226,6 +226,14 @@ a,
   animation-play-state: running;
 }
 
+.hero-marquee_component:focus-within .hero-marquee_list-wrapper,
+.hero-marquee_component:hover .hero-marquee_list-wrapper {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+
 /* Text trucation + ellipsis */
 [aai-truncate] {
   position: relative;
@@ -588,6 +596,11 @@ ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
   background-repeat: no-repeat;  
 }
 
+.appen-grad-90 {
+  background: linear-gradient(72deg, rgba(124, 208, 255, 0.33) 7.43%, rgba(240, 239, 234, 1) 88.33%);
+  background-repeat: no-repeat;  
+}
+
 .mesh-one {
   background-color: hsla(228,23%,4%,1);
   background-image:
@@ -675,7 +688,7 @@ ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
 
 .appen-hero .image-bleed {
   padding-block: var(--section-padding-block);
-  padding-left: 5%;
+  padding-left: 0;
 }
 
 .appen-hero {
@@ -821,7 +834,6 @@ ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
 	.form-modal_content-wrapper {	 	
     position: relative;
     border: 1px solid #eceff0;
-    border-radius: 1.5rem;
     background: #fff;
   }
 }
