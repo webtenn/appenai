@@ -128,4 +128,23 @@
     --ico-syntax: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/675c9de7a0dfd0cf9437a53f_syntax.svg);
     --ico-vehicle-connected: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/675c9de848135f46ea504fab_vehicle-connected.svg);
     --ico-ehicle-insights: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/675c9de73d37d14ef9b3c9d6_vehicle-insights.svg);
+    --ico-ab-test: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddadee03e388003b8b1_ab-test.svg);
+    --ico-ab-test-alt: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaed73d41126112669_ab-test-alt.svg);
+    --ico-benchmark: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaf76cc545fefddfd7_benchmark.svg);
+    --ico-data-alt: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddac8b2598c2912a3c6_data-alt.svg);
+    --ico-experiment: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddac0a62937ce18683b_experiment.svg);
+    --ico-global-alt: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1dda4fe7f3cb23bb0d62_global-alt.svg);
+    --ico-human-checked: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaf3f0f13662824248_human-checked.svg);
+    --ico-passes: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaf57af28dcecc913f_passes.svg);
+    --ico-passes-alt: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1dda371a1180d5e5a8b0_passes-alt.svg);
+    --ico-processed: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddac5b8d9a83fb9b785_processed.svg);
+    --ico-prompt-creation: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaa7007dabdb0ef508_prompt-creation.svg);
+    --ico-rating: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddbd61efe3593b6dd81_rating.svg);
+    --ico-strong: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaea2c2f229552d756_strong.svg);
+    --ico-text-annotation: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1dda74afdd19cfcd9462_text-annotation.svg);
+    --ico-tools: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ea181fcb5f0b746bb97_tools.svg);
+    --ico-touch: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddbd61efe3593b6dd99_touch.svg);
+    --ico-unbiased: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaf82f90516228db8c_unbiased.svg);
+    --ico-unified: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddbd61efe3593b6dd84_unified.svg);
+    --ico-user-happy: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaf57af28dcecc91c5_user-happy.svg);
 }
