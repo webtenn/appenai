@@ -150,5 +150,7 @@
     --ico-human-assessment: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67af5d511a16859e792b5d66_human-assess.svg);
     --ico-contextual-failure: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67af5d55425018bb08193934_contextual-failure.svg);
     --ico-false-confidence: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67af5d5838bae48e91c9eba0_false-confidence.svg);
-
+    --ico-vital-signs: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67afae3ea4f74d69c45b3980_vital-signs.svg);
+    --ico-thermometer: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67afae3be485565759f722ec_thermometer.svg);
+    --ico-scan: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67afae3839cf14b1ed44c007_scan.svg);
 }
