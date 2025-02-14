@@ -147,4 +147,8 @@
     --ico-unbiased: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaf82f90516228db8c_unbiased.svg);
     --ico-unified: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddbd61efe3593b6dd84_unified.svg);
     --ico-user-happy: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67ae1ddaf57af28dcecc91c5_user-happy.svg);
+    --ico-human-assessment: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67af5d511a16859e792b5d66_human-assess.svg);
+    --ico-contextual-failure: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67af5d55425018bb08193934_contextual-failure.svg);
+    --ico-false-confidence: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67af5d5838bae48e91c9eba0_false-confidence.svg);
+
 }
