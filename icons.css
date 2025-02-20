@@ -153,4 +153,8 @@
     --ico-vital-signs: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67afae3ea4f74d69c45b3980_vital-signs.svg);
     --ico-thermometer: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67afae3be485565759f722ec_thermometer.svg);
     --ico-scan: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67afae3839cf14b1ed44c007_scan.svg);
+    --ico-ouput: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67b781c2680bb629c8c31432_output.svg);
+    --ico-harmful-output: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67b781c29a815f6270ac3d65_harmful-output.svg);
+    --ico-bias: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67b781c253e9a92ff366613a_bias.svg);
+    --ico-flag: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67b781c2c2496ff31700a45b_flag.svg);
 }
