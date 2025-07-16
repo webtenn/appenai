@@ -1167,3 +1167,16 @@ ul.text-color-warm li a:hover, ul.text-color-warm li a:focus {
   	margin-right: 0;
 	}
 }
+
+/* tables */ 
+
+@media screen and (max-width: 991px) {
+  [table-data-label]:before {
+    content: attr(table-data-label);
+    display: block;
+    color: #6e8589;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
