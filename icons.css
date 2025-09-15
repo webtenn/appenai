@@ -1,4 +1,4 @@
-.ico, .ico-boxed {
+.ico {
     background: var(var(--icon-color--icon-primary));
     -webkit-mask-size: contain !important;
         mask-size: contain !important;
@@ -157,5 +157,13 @@
     --ico-harmful-output: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67b781c29a815f6270ac3d65_harmful-output.svg);
     --ico-bias: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67b781c253e9a92ff366613a_bias.svg);
     --ico-flag: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/67b781c2c2496ff31700a45b_flag.svg);
-    --ico-mic: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/6877b44661ec03c51f28b628_microphone.svg);  
+    --ico-mic: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/6877b44661ec03c51f28b628_microphone.svg);
+    --ico-waveform: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/68c85d3d55b38292e40e0bd0_waveform.svg);
+    --ico-step-chart: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/68c85d278cf0554bdb146f7a_step-chart.svg);
+    --ico-model: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/68c85d1225bf6d6ebdd59b03_model.svg);
+    --ico-foundation-model: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/68c85cdbb2abc03e7c2695c2_foundation-model.svg);
+    --ico-machine-learning: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/68c85cf7032f5f6e5ef14f0f_machine-learning.svg);
+    --ico-analytics: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/68c85cdf8555477e7a366458_analytics.svg);
+    --ico-idea: url(https://cdn.prod.website-files.com/656a605609413dfd3feb9d34/68c85cc162cde3efb03f0660_idea.svg);
+    
 }
