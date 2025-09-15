@@ -1,4 +1,4 @@
-.ico {
+.ico, .ico-boxed {
     background: var(var(--icon-color--icon-primary));
     -webkit-mask-size: contain !important;
         mask-size: contain !important;
