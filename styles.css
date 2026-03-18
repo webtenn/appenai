@@ -464,10 +464,10 @@ a,
 p a,
 .text-rich-text a,
 ul.link-list a {
-  color: #000;
+  color: #121212;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-  text-decoration-color: var(--link-color--link-primary-hover);
+  text-decoration-color: #6b6b6b;
   text-decoration-line: underline;
   text-underline-offset: .25em;
   -webkit-transition: all 0.3s ease-in-out;
@@ -480,7 +480,7 @@ p a:focus,
 .text-rich-text a:focus,
 ul.link-list a:hover,
 ul.link-list a:focus {
-  color: var(--link-color--link-primary);
+  color: #121212;
   text-decoration-thickness: 2px;
 }
 
