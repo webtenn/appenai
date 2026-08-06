@@ -1635,13 +1635,22 @@ text-overflow: ellipsis;
 width: 225px;
 }
 
-
-/* Stats Grid Span for Odd Containers */
+/* Stats grid span for odd containers */
 @media (max-width: 767px) {
   .mkt-stat-item:last-child:nth-child(odd) {
     grid-column: span 2;
   }
   .partner-stat-item:last-child:nth-child(odd) {
     grid-column: span 2;
+  }
+}
+
+/* Reset grid span for odd containers */
+@media (max-width: 479px) {
+  .mkt-stat-item:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+  .partner-stat-item:last-child:nth-child(odd) {
+    grid-column: auto;
   }
 }
