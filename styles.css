@@ -1672,3 +1672,45 @@ width: 225px;
 @media (prefers-reduced-motion: reduce) {
   .sticky-cta_tab, .sticky-cta_tab.is-visible { transition: none; }
 }
+
+/* FAQ accordion — the .is-open class is toggled by scripts.js
+   (features.faqAccordion). The answer text is always present in the HTML; it is
+   collapsed visually, never removed, so crawlers read it either way.
+
+   Everything is scoped to .js (set in Site Settings → Head) so the answers stay
+   expanded and readable when JavaScript is unavailable — unlike the CTA tab,
+   losing this content would lose the page's substance.
+
+   0fr → 1fr animates to the answer's natural height with no JS measuring.
+   .faq_answer must carry no padding, margin or border, or it never collapses
+   flat — all spacing belongs on .faq_answer-inner. */
+.faq_question {
+  cursor: pointer;
+  user-select: none;
+}
+.faq_question:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.js .faq_answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .3s ease;
+}
+.js .faq_item.is-open > .faq_answer {
+  grid-template-rows: 1fr;
+}
+/* min-height: 0 is required — without it the grid track refuses to collapse. */
+.js .faq_answer-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+.faq_icon {
+  transition: transform .3s ease;
+}
+.faq_item.is-open .faq_icon {
+  transform: rotate(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .faq_answer, .faq_icon { transition: none; }
+}
