@@ -1654,3 +1654,21 @@ width: 225px;
     grid-column: auto;
   }
 }
+/* Sticky CTA tab — hidden until its sticky wrapper pins beneath the nav.
+   The .is-visible class is toggled by scripts.js (features.stickyCtaTab).
+   Asymmetric transitions are deliberate: fast retract, slower reveal. */
+.sticky-cta_tab {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform .05s ease-in, opacity .05s ease-in, visibility 0s linear .05s;
+}
+.sticky-cta_tab.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform .35s cubic-bezier(.2,.7,.3,1), opacity .3s ease-out, visibility 0s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta_tab, .sticky-cta_tab.is-visible { transition: none; }
+}
