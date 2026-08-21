@@ -128,6 +128,79 @@
     });
   };
 
+  /* UTM capture
+   *
+   * Persists utm_* parameters from the landing URL and stamps them into the
+   * hidden fields of any HubSpot form, however many pages later the visitor
+   * converts. Runs on every page — there's nothing to opt in.
+   *
+   * Needed because CTAs link to bare URLs: a visitor landing on a campaign
+   * URL and clicking through to /contact-us arrives with no parameters left,
+   * so the values have to be carried in a cookie rather than the querystring.
+   *
+   * First-touch — an existing cookie is never overwritten, so the campaign
+   * that earned the visit is credited, not the last page before the form.
+   * Flip FIRST_TOUCH for last-touch.
+   *
+   * The matching hidden fields must already exist on the HubSpot form; this
+   * only fills them. The contact-us form carries all five.
+   */
+  features.utmCapture = function () {
+    var PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    var PREFIX = 'appen_';
+    var DAYS = 90;
+    var FIRST_TOUCH = true;
+
+    function read(name) {
+      var m = document.cookie.match('(^|;)\\s*' + PREFIX + name + '\\s*=\\s*([^;]+)');
+      return m ? decodeURIComponent(m.pop()) : null;
+    }
+
+    function write(name, value) {
+      var d = new Date();
+      d.setTime(d.getTime() + DAYS * 864e5);
+      document.cookie = PREFIX + name + '=' + encodeURIComponent(value) +
+        ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+    }
+
+    var qs = new URLSearchParams(window.location.search);
+    PARAMS.forEach(function (p) {
+      var v = qs.get(p);
+      if (v && !(FIRST_TOUCH && read(p))) write(p, v);
+    });
+
+    /* Legacy HubSpot embeds render into a src-less — and therefore same-origin
+     * — iframe, so the fields are not in this document; reach into each form's
+     * contentDocument. Only hidden inputs are touched, because matching a
+     * visible field by name would let a stray ?email= in a URL overwrite what
+     * the visitor typed. */
+    function fill(doc) {
+      PARAMS.forEach(function (p) {
+        var v = read(p);
+        if (!v) return;
+        var field = doc.querySelector('input[type=hidden][name="' + p + '"]');
+        if (field && !field.value) field.value = v;
+      });
+    }
+
+    function fillAll() {
+      fill(document);
+      var frames = document.querySelectorAll('iframe.hs-form-iframe');
+      Array.prototype.forEach.call(frames, function (frame) {
+        try { fill(frame.contentDocument); } catch (err) { /* cross-origin */ }
+      });
+    }
+
+    /* Both orderings happen: this file loads from the footer, so a form can
+     * already be ready when it runs (the immediate pass) or become ready
+     * afterwards (the event). Filling twice is harmless — the guard in fill()
+     * leaves a populated field alone. */
+    window.addEventListener('message', function (e) {
+      if (e.data && e.data.type === 'hsFormCallback' && e.data.eventName === 'onFormReady') fillAll();
+    });
+    fillAll();
+  };
+
   Object.keys(features).forEach(function (name) {
     try {
       features[name]();
