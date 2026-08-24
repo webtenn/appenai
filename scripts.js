@@ -143,10 +143,27 @@
    * Flip FIRST_TOUCH for last-touch.
    *
    * The matching hidden fields must already exist on the HubSpot form; this
-   * only fills them. The contact-us form carries all five.
+   * only fills them.
    */
   features.utmCapture = function () {
-    var PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    /* URL parameter → HubSpot internal field name. The two differ for click
+     * IDs: X arrives as ?twclid= but HubSpot stores it as latest_x_click_id.
+     *
+     * Google and LinkedIn are deliberately absent. HubSpot owns
+     * hs_google_click_id and hs_linkedin_click_id and fills them itself from
+     * the native ads integration — they can't be added as form fields, so
+     * there is nothing for this to do. Confirmed with marketing 2026-08-24;
+     * don't add them here.
+     */
+    var FIELDS = {
+      utm_source: 'utm_source',
+      utm_medium: 'utm_medium',
+      utm_campaign: 'utm_campaign',
+      utm_term: 'utm_term',
+      utm_content: 'utm_content',
+      twclid: 'latest_x_click_id'
+    };
+    var PARAMS = Object.keys(FIELDS);
     var PREFIX = 'appen_';
     var DAYS = 90;
     var FIRST_TOUCH = true;
@@ -176,9 +193,11 @@
      * the visitor typed. */
     function fill(doc) {
       PARAMS.forEach(function (p) {
+        /* Cookies are keyed on the URL parameter, the selector on the HubSpot
+         * field name — the two are not always the same. */
         var v = read(p);
         if (!v) return;
-        var field = doc.querySelector('input[type=hidden][name="' + p + '"]');
+        var field = doc.querySelector('input[type=hidden][name="' + FIELDS[p] + '"]');
         if (field && !field.value) field.value = v;
       });
     }
