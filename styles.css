@@ -1714,3 +1714,36 @@ width: 225px;
 @media (prefers-reduced-motion: reduce) {
   .js .faq_answer, .faq_icon { transition: none; }
 }
+
+/* Tabbed content switcher — the .is-active class is toggled by scripts.js
+   (features.tabs). Every pane stays in the HTML and only its display changes,
+   so crawlers read all of them.
+
+   Scoped to .js for the same reason as the FAQ: without JavaScript the panes
+   stack and stay readable rather than collapsing to one. The .js class comes
+   from site-level custom code, which the Designer does not render — so every
+   pane is visible and editable in the canvas, which is the point.
+
+   Only the show/hide belongs here. The active tab's border, background and
+   opacity are a Designer combo class (.tabs_tab.is-active), so they stay
+   adjustable in the canvas. */
+.tabs_tab {
+  cursor: pointer;
+  user-select: none;
+}
+.tabs_tab:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.js .tabs_pane {
+  display: none;
+}
+.js .tabs_pane.is-active {
+  display: block;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .tabs_pane.is-active { animation: tabs-fade .25s ease-out; }
+}
+@keyframes tabs-fade {
+  from { opacity: 0; transform: translateY(4px); }
+}

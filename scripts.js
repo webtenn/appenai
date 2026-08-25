@@ -128,6 +128,107 @@
     });
   };
 
+  /* Tabbed content switcher
+   *
+   * Opt a page in by adding a .tabs_component wrapper holding a .tabs_nav of
+   * .tabs_tab triggers and a .tabs_content of .tabs_pane blocks. Tabs pair to
+   * panes by document order — the 1st tab shows the 1st pane — so there are no
+   * IDs to keep in sync when a pane is added or reordered.
+   *
+   * Optional attribute on .tabs_component:
+   *   data-tabs-default="2"  1-based tab to open on load (default 1)
+   *
+   * Show/hide lives in styles.css under .tabs_pane.is-active; the active tab's
+   * appearance is a Designer combo class, also .is-active. This only toggles
+   * the classes, keeps the ARIA state in sync, and adds the arrow-key
+   * behaviour a real tablist is expected to have.
+   */
+  features.tabs = function () {
+    var comps = document.querySelectorAll('.tabs_component');
+    if (!comps.length) return;
+
+    var uid = 0;
+
+    Array.prototype.forEach.call(comps, function (comp) {
+      /* Only this component's own tabs and panes. The closest() check stops a
+       * nested switcher from being driven by its parent. */
+      function own(sel) {
+        return Array.prototype.filter.call(comp.querySelectorAll(sel), function (el) {
+          return el.closest('.tabs_component') === comp;
+        });
+      }
+
+      var tabs = own('.tabs_tab');
+      var panes = own('.tabs_pane');
+      if (!tabs.length || !panes.length) return;
+
+      /* A mismatch is a build mistake, not a page without the feature — the
+       * extra tab or pane would just never respond. Say so rather than
+       * failing quietly. */
+      if (tabs.length !== panes.length) {
+        console.warn('[appen] tabs: ' + tabs.length + ' tabs but ' + panes.length +
+          ' panes — the extras are inert', comp);
+      }
+      var count = Math.min(tabs.length, panes.length);
+
+      var nav = comp.querySelector('.tabs_nav');
+      if (nav) nav.setAttribute('role', 'tablist');
+
+      /* Webflow can't output a <button>, so upgrade the trigger divs here. */
+      for (var i = 0; i < count; i++) {
+        uid += 1;
+        if (!tabs[i].id) tabs[i].id = 'tabs-tab-' + uid;
+        if (!panes[i].id) panes[i].id = 'tabs-pane-' + uid;
+        tabs[i].setAttribute('role', 'tab');
+        tabs[i].setAttribute('aria-controls', panes[i].id);
+        panes[i].setAttribute('role', 'tabpanel');
+        panes[i].setAttribute('aria-labelledby', tabs[i].id);
+        /* Focusable so a keyboard user can scroll a long pane. */
+        panes[i].setAttribute('tabindex', '0');
+      }
+
+      function activate(index, moveFocus) {
+        for (var n = 0; n < count; n++) {
+          var on = n === index;
+          tabs[n].classList.toggle('is-active', on);
+          tabs[n].setAttribute('aria-selected', on ? 'true' : 'false');
+          /* Roving tabindex: the set is one tab stop, arrows move within it. */
+          tabs[n].setAttribute('tabindex', on ? '0' : '-1');
+          panes[n].classList.toggle('is-active', on);
+        }
+        if (moveFocus) tabs[index].focus();
+      }
+
+      var def = parseInt(comp.getAttribute('data-tabs-default'), 10);
+      activate(def >= 1 && def <= count ? def - 1 : 0, false);
+
+      comp.addEventListener('click', function (e) {
+        var t = e.target.closest('.tabs_tab');
+        var i = t ? tabs.indexOf(t) : -1;
+        if (i > -1 && i < count) activate(i, false);
+      });
+
+      comp.addEventListener('keydown', function (e) {
+        var t = e.target.closest('.tabs_tab');
+        var i = t ? tabs.indexOf(t) : -1;
+        if (i < 0 || i >= count) return;
+
+        /* Both arrow pairs are wired so the same markup works whether the nav
+         * is stacked or laid out in a row. */
+        var next;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (i + 1) % count;
+        else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = (i - 1 + count) % count;
+        else if (e.key === 'Home') next = 0;
+        else if (e.key === 'End') next = count - 1;
+        else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(i, false); return; }
+        else return;
+
+        e.preventDefault();
+        activate(next, true);
+      });
+    });
+  };
+
   /* UTM capture
    *
    * Persists utm_* parameters from the landing URL and stamps them into the
