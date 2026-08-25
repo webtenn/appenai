@@ -202,6 +202,12 @@
       var def = parseInt(comp.getAttribute('data-tabs-default'), 10);
       activate(def >= 1 && def <= count ? def - 1 : 0, false);
 
+      /* Fail open: styles.css hides panes only under .is-ready, so a stale or
+       * broken script leaves all of them stacked and readable rather than
+       * emptying the section. Set after the first activate(), never before,
+       * or there is a frame with hiding on and no pane marked active. */
+      comp.classList.add('is-ready');
+
       comp.addEventListener('click', function (e) {
         var t = e.target.closest('.tabs_tab');
         var i = t ? tabs.indexOf(t) : -1;

@@ -1719,10 +1719,17 @@ width: 225px;
    (features.tabs). Every pane stays in the HTML and only its display changes,
    so crawlers read all of them.
 
-   Scoped to .js for the same reason as the FAQ: without JavaScript the panes
-   stack and stay readable rather than collapsing to one. The .js class comes
-   from site-level custom code, which the Designer does not render — so every
-   pane is visible and editable in the canvas, which is the point.
+   Hiding is gated on BOTH .js and .is-ready, and neither is optional:
+
+   .js       set by site-level custom code, so the panes stay readable when
+             JavaScript is off. The Designer does not render site-level code,
+             which is why every pane is visible and editable in the canvas.
+   .is-ready set by features.tabs on each component once it has actually run.
+             Without it the hide rule applies even when the script is stale,
+             absent or threw, leaving an empty box where the content was —
+             which is exactly what a half-finished tag bump produced on
+             2026-08-25. Content degrades to a readable stack, never to
+             nothing.
 
    Only the show/hide belongs here. The active tab's border, background and
    opacity are a Designer combo class (.tabs_tab.is-active), so they stay
@@ -1735,15 +1742,15 @@ width: 225px;
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }
-.js .tabs_pane {
+.js .tabs_component.is-ready .tabs_pane {
   display: none;
 }
-.js .tabs_pane.is-active {
+.js .tabs_component.is-ready .tabs_pane.is-active {
   display: block;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .js .tabs_pane.is-active { animation: tabs-fade .25s ease-out; }
+  .js .tabs_component.is-ready .tabs_pane.is-active { animation: tabs-fade .15s ease-out; }
 }
 @keyframes tabs-fade {
-  from { opacity: 0; transform: translateY(4px); }
+  from { opacity: 0; }
 }
