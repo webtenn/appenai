@@ -1708,8 +1708,12 @@ width: 225px;
 .faq_icon {
   transition: transform .3s ease;
 }
+/* The icon is a plus, so 45deg turns it into an x. Rotating .faq_icon rather
+   than the SVG inside it is safe because the wrapper is sized to the icon
+   exactly (16px square via .icon-embed-xxsmall), so it pivots on its centre.
+   Closing animates 45deg -> 0, i.e. back the way it came. */
 .faq_item.is-open .faq_icon {
-  transform: rotate(180deg);
+  transform: rotate(45deg);
 }
 @media (prefers-reduced-motion: reduce) {
   .js .faq_answer, .faq_icon { transition: none; }
