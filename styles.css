@@ -578,7 +578,7 @@ ol[role="list"] > li > ol[role="list"] > li > ol[role="list"] {
 
 /* hide workforce cta at smaller screens */
 
-@media only screen and (min-width: 992px) and (max-width: 1075px) {
+@media only screen and (min-width: 992px) and (max-width: 1220px) {
   #workforce { display: none !important; }
 }
 
