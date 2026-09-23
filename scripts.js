@@ -23,6 +23,16 @@
    * Opt a page in by adding .sticky-cta_wrapper (position: sticky; top: 64px)
    * with a .sticky-cta_tab link inside it. No per-page configuration.
    *
+   * Optional attribute on .sticky-cta_wrapper:
+   *   data-cta-after="300"  reveal after N px of scroll instead of on pin
+   *
+   * Pin detection is the default because it needs no tuning: the tab appears
+   * exactly when it locks under the nav, whatever the hero's height. It only
+   * works when something tall sits above the wrapper, though. On a page with
+   * no hero the wrapper starts at the top of .main-wrapper and is already
+   * pinned at scroll 0, so the tab would be visible on load — that's what the
+   * offset is for. Reach for it only when pin detection can't work.
+   *
    * Visibility and transitions live in styles.css under .sticky-cta_tab and
    * .sticky-cta_tab.is-visible — this only toggles the class.
    */
@@ -32,14 +42,24 @@
     if (!tab || !wrap) return;
 
     var nav = document.querySelector('.nav.w-nav');
+    /* NaN fails this test, so a missing or non-numeric attribute falls
+     * through to pin detection — existing pages are unaffected. */
+    var after = parseInt(wrap.getAttribute('data-cta-after'), 10);
+    var useOffset = after >= 0;
     var ticking = false;
 
     function update() {
       ticking = false;
-      var navH = nav ? nav.getBoundingClientRect().height : 64;
-      /* A pinned sticky element's top equals its CSS top value, and is
-       * greater than it before pinning. The +1 absorbs subpixel drift. */
-      tab.classList.toggle('is-visible', wrap.getBoundingClientRect().top <= navH + 1);
+      var shown;
+      if (useOffset) {
+        shown = window.scrollY >= after;
+      } else {
+        var navH = nav ? nav.getBoundingClientRect().height : 64;
+        /* A pinned sticky element's top equals its CSS top value, and is
+         * greater than it before pinning. The +1 absorbs subpixel drift. */
+        shown = wrap.getBoundingClientRect().top <= navH + 1;
+      }
+      tab.classList.toggle('is-visible', shown);
     }
 
     function onScroll() {
