@@ -23,8 +23,9 @@
    * Opt a page in by adding .sticky-cta_wrapper (position: sticky; top: 64px)
    * with a .sticky-cta_tab link inside it. No per-page configuration.
    *
-   * Optional attribute on .sticky-cta_wrapper:
-   *   data-cta-after="300"  reveal after N px of scroll instead of on pin
+   * Optional attributes on .sticky-cta_wrapper:
+   *   data-cta-after="300"              reveal after N px of scroll rather than on pin
+   *   data-cta-until=".some-section"    retract once that element reaches the tab
    *
    * Pin detection is the default because it needs no tuning: the tab appears
    * exactly when it locks under the nav, whatever the hero's height. It only
@@ -32,6 +33,12 @@
    * no hero the wrapper starts at the top of .main-wrapper and is already
    * pinned at scroll 0, so the tab would be visible on load — that's what the
    * offset is for. Reach for it only when pin detection can't work.
+   *
+   * data-cta-until is independent of which reveal trigger is in use. It takes
+   * a CSS selector and hides the tab once that element's top crosses the line
+   * the tab sits on, so the tab clears out as the section slides under it.
+   * Typically pointed at a page's closing CTA section, to stop two competing
+   * calls to action sharing the screen.
    *
    * Visibility and transitions live in styles.css under .sticky-cta_tab and
    * .sticky-cta_tab.is-visible — this only toggles the class.
@@ -46,19 +53,38 @@
      * through to pin detection — existing pages are unaffected. */
     var after = parseInt(wrap.getAttribute('data-cta-after'), 10);
     var useOffset = after >= 0;
+
+    /* Resolved once — the stop section is static markup. A malformed selector
+     * throws out of querySelector and one that matches nothing is a build
+     * mistake; both are worth saying out loud, but neither should cost the
+     * page its tab, so carry on without a stop either way. */
+    var untilSel = wrap.getAttribute('data-cta-until');
+    var stop = null;
+    if (untilSel) {
+      try {
+        stop = document.querySelector(untilSel);
+        if (!stop) {
+          console.warn('[appen] stickyCtaTab: data-cta-until matched nothing:', untilSel);
+        }
+      } catch (err) {
+        console.warn('[appen] stickyCtaTab: data-cta-until is not a valid selector:', untilSel);
+      }
+    }
+
     var ticking = false;
 
     function update() {
       ticking = false;
+      var navH = nav ? nav.getBoundingClientRect().height : 64;
       var shown;
       if (useOffset) {
         shown = window.scrollY >= after;
       } else {
-        var navH = nav ? nav.getBoundingClientRect().height : 64;
         /* A pinned sticky element's top equals its CSS top value, and is
          * greater than it before pinning. The +1 absorbs subpixel drift. */
         shown = wrap.getBoundingClientRect().top <= navH + 1;
       }
+      if (shown && stop && stop.getBoundingClientRect().top <= navH + 1) shown = false;
       tab.classList.toggle('is-visible', shown);
     }
 
